@@ -15,8 +15,7 @@
 ```
 protected void doService(HttpServletRequest request, HttpServletResponse response) throws Exception{.....}
 
-请求的崇礼是从doService方法开始的
-
+请求的处理是从doService方法开始的
 ```
 
 ### _HandlerMapping_
