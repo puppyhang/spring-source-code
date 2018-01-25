@@ -6,13 +6,12 @@
 
 * DispatcherServlet
 
-  ```
     中央调度器
-  ```
 
 * HandlerMapping
 
 * HandlerAdapter
+
 * ModelAndView
 * HandlerExcutionChain
 * HandlerInterceptor
