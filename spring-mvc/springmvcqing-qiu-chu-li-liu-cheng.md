@@ -19,5 +19,5 @@
 
 我改用哪种请求方式？
 
-我该用那么Content-Type
+我该用那么Content-Type?
 
