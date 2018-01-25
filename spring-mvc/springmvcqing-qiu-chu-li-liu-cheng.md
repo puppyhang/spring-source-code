@@ -64,7 +64,20 @@ processRequest(HttpServletRequest request, HttpServletResponse response)
 ### _HandlerMapping_
 
 > Interface to be implemented by objects that define a mapping between  
->  requests and handler objects.
+>  requests and handler objects.  
+>  这个接口会被那些定义了请求和处理器之间的映射关系的对象实现,他的实现类有BeanNameUrlHandlerMapping，DefaultAnnotationHandlerMapping，RequestMappingHandlerMapping等
+
+**RequestMappingHandlerMapping**
+    
+    平时我们在controller中使用@RequestMapping定义的handler方法就是被这个类发现的，
+    如果这个类不能正常工作，那么我们定义的接口八九不离十的会出现404了，看看他是怎么工作的。
+**BeanNameUrlHandlerMapping**
+    
+    使用定义的Bean的名字去映射URLS
+
+**DefaultAnnotationHandlerMapping**
+
+    这个实现已经过时了，所以不做过多的讲解。
 
 ### _HandlerAdapter_
 
