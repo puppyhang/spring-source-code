@@ -24,7 +24,11 @@
 protected void doService(HttpServletRequest request, HttpServletResponse response) throws Exception{.....}
 ```
 
-请求的处理是从doService方法开始的，我们在web.xml中如下方式注册了DispatcherServlet之后容器会根据url匹配，如果匹配上，首先会调用FrameworkServlet中重写的service\(HttpServletRequest,HttpServletResponse\)方法。
+请求的处理是从doService方法开始的，我们在web.xml中如下方式注册了DispatcherServlet之后容器会根据url匹配，如果匹配上，首先会调用FrameworkServlet中重写的service\(HttpServletRequest,HttpServletResponse\)方法。然后这个方法中调用
+
+```
+processRequest(HttpServletRequest request, HttpServletResponse response)
+```
 
 ![](/assets/dispatcher.png)
 
