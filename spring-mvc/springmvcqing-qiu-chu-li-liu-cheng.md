@@ -63,9 +63,8 @@ processRequest(HttpServletRequest request, HttpServletResponse response)
 
 ### _HandlerMapping_
 
-> Interface to be implemented by objects that define a mapping between requests and handler objects.
-
-
+> Interface to be implemented by objects that define a mapping between  
+>  requests and handler objects.
 
 ### _HandlerAdapter_
 
