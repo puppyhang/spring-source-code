@@ -18,7 +18,7 @@
 
 回答了这个问题我们就可以找到理解DispatcherServlet的切入点了，既然他是一个Servlet，那么他肯定可以接受到容器转发给他的请求，也就是会执行 **doGet/doPost/doPut/doDelete/doOptions/service\(\)  **等方法的其中一个，这样他才有机会处理用户的请求。故事就这样从这里开始了😁😂！让我一起开始这愉快的旅程吧。
 
-![](assets/dispatcher-servlet-uml.png)
+![](/assets/dispatcher-servlet-uml.png)
 
 ```
 protected void doService(HttpServletRequest request, HttpServletResponse response) 
