@@ -10,6 +10,8 @@
 
 首先纠正一个概念，大多数看网上文章"长大的"人都会把这个组件称之为前端控制器，但事实上更适合他的名称应该是中央调度器，在spring的源码中关于这个组件的文档的第一句话就写上以上的解释。下文就间的使用dispatcher来代表DispatcherServlet。
 
+这个类见名知意，他是一个Servlet，基于tomcat-embed-core-8.5，servlet 3.1 标准。
+
 ### _HandlerMapping_
 
 ### _HandlerAdapter_
