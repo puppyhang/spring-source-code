@@ -13,7 +13,7 @@
 这个类见名知意，他是一个Servlet，基于tomcat-embed-core-8.5.23，实现的是servlet 3.1 标准。下面开始从源码中讲解其处理请求的流程
 
 ```
-protected void doService(HttpServletRequest request, HttpServletResponse response) throws Exception
+protected void doService(HttpServletRequest request, HttpServletResponse response) throws Exception{.....}
 ```
 
 ### _HandlerMapping_
