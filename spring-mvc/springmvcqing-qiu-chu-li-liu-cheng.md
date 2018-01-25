@@ -48,7 +48,8 @@ protected void doService(HttpServletRequest request, HttpServletResponse respons
 ```
 service(HttpServletRequest request, HttpServletResponse response)
 
-这个方法的实现很简单，如果HTTP请求方法是PATCH,或者为null，就直接执行processRequest方法，否则执行父类的service方法，
+这个方法的实现很简单，如果HTTP请求方法是PATCH,或者为null，就直接执行processRequest方法，
+否则执行父类的service方法，
 那么父类的service方法就会根据请求的类型来对应调用do$HTTP_REQUEST_METHOD()方法
 ```
 
