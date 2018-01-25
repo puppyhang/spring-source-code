@@ -8,6 +8,8 @@
 
   > _Central dispatcher dor HTTP request handlers/controllers _**中央调度器**
 
+  首先纠正一个概念
+
 * HandlerMapping
 
 * HandlerAdapter
@@ -19,6 +21,7 @@
 * HandlerInterceptor
 
 * Handler
+
 * ViewResolver
 
 ## 以后不要再问我
