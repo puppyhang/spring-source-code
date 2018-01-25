@@ -26,9 +26,7 @@ spring mvc 请求流程(基于spring 4.3.x 分支)
 protected void doService(HttpServletRequest request, HttpServletResponse response) throws Exception{.....}
 ```
 
-```
 请求的处理是从doService方法开始的
-```
 
 ### _HandlerMapping_
 
