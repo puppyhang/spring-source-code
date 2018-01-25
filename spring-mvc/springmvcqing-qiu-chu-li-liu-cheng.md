@@ -4,7 +4,7 @@
 
 ## 核心概念
 
-### DispatcherServlet
+### _DispatcherServlet_
 
 > _Central dispatcher dor HTTP request handlers/controllers    _**中央调度器**
 
