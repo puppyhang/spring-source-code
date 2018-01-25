@@ -1,4 +1,6 @@
-# spring mvc 请求流程\(基于spring 4.3.x 分支\) {#spring-mvc}
+```
+spring mvc 请求流程(基于spring 4.3.x 分支)
+```
 
 > ![](/assets/springmvc-process.jpg)图片引用自：[https://www.cnblogs.com/hujiapeng/p/5765636.html](https://www.cnblogs.com/hujiapeng/p/5765636.html) 借作者这张图阐述自己对spring mvc 的理解
 
@@ -18,9 +20,7 @@
 
 回答了这个问题我们就可以找到理解DispatcherServlet的切入点了，既然他是一个Servlet，那么他肯定可以接受到容器转发给他的请求，也就是会执行 **doGet/doPost/doPut/doDelete/doOptions/service\(\)  **等方法的其中一个，这样他才有机会处理用户的请求。故事就这样从这里开始了
 
-```
 :smile:
-```
 
 ```
 protected void doService(HttpServletRequest request, HttpServletResponse response) throws Exception{.....}
