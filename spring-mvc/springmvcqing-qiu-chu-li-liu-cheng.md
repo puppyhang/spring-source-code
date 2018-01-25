@@ -8,7 +8,7 @@
 
   > _Central dispatcher dor HTTP request handlers/controllers _**中央调度器**
 
-  首先纠正一个概念
+  首先纠正一个概念，大多数看网上文章"长大的"人都会把这个组件称之为前端控制器，但事实上更适合他的名称应该是中央调度器，在spring的源码中关于这个组件的文档的第一句话就写上以上的解释。
 
 * HandlerMapping
 
