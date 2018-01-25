@@ -6,7 +6,7 @@
 
 * DispatcherServlet
 
-  > Central dispatcher dor HTTP request handlers/controllers 中央调度器
+  > Central dispatcher dor HTTP request handlers/controllers **中央调度器**
 
 * HandlerMapping
 
@@ -15,6 +15,7 @@
 * ModelAndView
 
 * HandlerExcutionChain
+
 * HandlerInterceptor
 * Handler
 * ViewResolver
