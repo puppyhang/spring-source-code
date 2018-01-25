@@ -7,14 +7,7 @@
 * DispatcherServlet
 * HandlerMapping
 * HandlerAdapter
-
-
-
-
-
-
-
-
+* ViewResolver
 
 ## 以后不要再问我
 
