@@ -57,10 +57,15 @@ service(HttpServletRequest request, HttpServletResponse response)
 ```
 processRequest(HttpServletRequest request, HttpServletResponse response)
 
-这个方法的实现很简单，
+这个方法做了一系列的初始化之后就会调用doService()方法，这样就到了DispatcherServlet处理求情的方法了，
+核心的逻辑从这里开始了，如果想看懂核心逻辑是如何实现，请先继续看完一下核心概念,然后我们在继续讨论Dispatcher是如何工作的
 ```
 
 ### _HandlerMapping_
+
+> Interface to be implemented by objects that define a mapping between requests and handler objects.
+
+
 
 ### _HandlerAdapter_
 
