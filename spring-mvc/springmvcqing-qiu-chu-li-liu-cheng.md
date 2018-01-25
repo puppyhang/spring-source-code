@@ -42,12 +42,18 @@ protected void doService(HttpServletRequest request, HttpServletResponse respons
     </servlet-mapping>
 ```
 
-如果匹配上，首先会调用FrameworkServlet中重写的service\(HttpServletRequest,HttpServletResponse\)方法。然后这个方法中调用如下方法
+如果匹配上，首先会调用FrameworkServlet中重写的
+
+```
+service(HttpServletRequest request, HttpServletResponse response)
+```
+
+方法。然后这个方法中调用如下方法
 
 ```
 processRequest(HttpServletRequest request, HttpServletResponse response)
 
-这个方法的实现很简单
+这个方法的实现很简单，
 ```
 
 ### _HandlerMapping_
