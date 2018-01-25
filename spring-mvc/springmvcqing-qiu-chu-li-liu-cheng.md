@@ -14,6 +14,8 @@
 
 首先问一个问题：**spring可以接受用户发起的请求吗？**
 
+答案是否定的，spring并不可以接受用户发起的请求，接受请求的是servlet容器，比如tomcat/jetty/undertow
+
 ```
 protected void doService(HttpServletRequest request, HttpServletResponse response) throws Exception{.....}
 
