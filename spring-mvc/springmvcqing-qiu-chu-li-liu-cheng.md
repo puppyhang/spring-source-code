@@ -6,6 +6,7 @@
 
 * DispatcherServlet
 * HandlerMapping
+* HandlerAdapter
 
 
 
