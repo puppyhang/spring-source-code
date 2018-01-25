@@ -26,7 +26,7 @@ spring mvc 请求流程(基于spring 4.3.x 分支)
 protected void doService(HttpServletRequest request, HttpServletResponse response) throws Exception{.....}
 ```
 
-请求的处理是从doService方法开始的
+请求的处理是从doService方法开始的，我们在web.xml中如下方式注册了DispatcherServlet之后容器首先会调用
 
 ### _HandlerMapping_
 
