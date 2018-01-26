@@ -102,6 +102,8 @@ handler:常用的handler的类型是HandlerMethod，被@Controller和@RequestMap
 
 ### _ViewResolver_
 
+> 视图解析器
+
 ### _Aware_
 >Marker superinterface indicating that a bean is eligible to be
 notified by the Spring container of a particular framework object
