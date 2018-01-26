@@ -4,7 +4,7 @@
 
 ## ClassPathXmlApplicationContext
 
-看`AbstractXmlApplicationContext`的这个方法的实现，只是使用了XmlBeanDefinitionReader 来对xml中描述的bean做一个加载，加载的逻辑可以看看 [bean-factory](/spring-core/applicationcontext.md "bean-factory"),登记到BeanDefinitionRegistry之后由BeanFactory操作。所以ApplicationContext只是BeanFactory的一个"代理对象而已"
+看`AbstractXmlApplicationContext`(ClassPathXmlApplicationContext的父类)的这个方法的实现，只是使用了XmlBeanDefinitionReader 来对xml中描述的bean做一个加载，加载的逻辑可以看看 [bean-factory](/spring-core/applicationcontext.md "bean-factory"),登记到BeanDefinitionRegistry之后由BeanFactory操作。所以ApplicationContext只是BeanFactory的一个"代理对象而已"
 
 
 ```
