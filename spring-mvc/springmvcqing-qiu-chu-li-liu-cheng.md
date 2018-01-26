@@ -69,7 +69,7 @@ spring中有很多种Handler，常见的是HandlerMethod,用HandlerMethod表示�
 ![](/assets/handler-chain.png)
 
 mappedHandler是一个HandlerExecutionChain类型的对象,HandlerExecutionChain类型的对象包括了一个handler和一些列handler interceptor。handler是用于保存处理请求器信息的对象，interceptor是拦截器，会在handler中处理请求的方法被执行之前被执行。
-handler:常用的handler的类型是HandlerMethod，被@Controller和@RequestMapping标记的类型或方法才可以被称之为处理器，
+handler:常用的handler的类型是HandlerMethod，被@Controller和@RequestMapping标记的类型或方法才可以被称之为处理器，handler里面包括了bean：处理这个用户请求类的bean，beanFactory：创建这个bean的工厂，beanType：这个bean的类型，method：处理用户请求的bean中执行请求的方法，paramters：方法执行需要的参数。
 
 
 ### _HandlerMapping_
