@@ -3,6 +3,6 @@
 ## 核心概念
 
 **DefaultListableBeanFactory:**
-
+> DefaultListableBeanFactory 是整个spring容器最核心的组件，
 
 
