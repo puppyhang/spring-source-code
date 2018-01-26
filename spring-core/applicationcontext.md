@@ -2,6 +2,7 @@
 
 ## 核心概念
 **BeanFactory**
+访问Spring容器的跟接口，
 
 **DefaultListableBeanFactory:**
 > DefaultListableBeanFactory 是整个spring容器最核心的组件，bean加载的核心组件，是spring bean注册和加载的默认实现。
