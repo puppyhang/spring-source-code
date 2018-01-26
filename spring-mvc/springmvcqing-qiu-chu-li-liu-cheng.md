@@ -49,7 +49,8 @@ protected void doService(HttpServletRequest request, HttpServletResponse respons
 service(HttpServletRequest request, HttpServletResponse response)
 
 这个方法的实现很简单，如果HTTP请求方法是PATCH,或者为null，就直接执行processRequest方法，
-否则执行父类的service方法，那么父类的service方法就会根据请求的类型来对应调用do$HTTP_REQUEST_METHOD()方法
+否则执行父类的service方法，那么父类的service方法就会根据请求的类型来对应调用do$HTTP_REQUEST_METHOD()方法,这do$HTTP_REQUEST_METHOD()方法的实现都是调用下面的
+processRequest方法。
 ```
 
 方法。然后这个方法中调用如下方法
@@ -92,13 +93,19 @@ processRequest(HttpServletRequest request, HttpServletResponse response)
 ### _ViewResolver_
 
 ### _Aware_
+>Marker superinterface indicating that a bean is eligible to be
+notified by the Spring container of a particular framework object
+through a callback-style method. Actual method signature is
+determined by individual subinterfaces, but should typically
+consist of just one void-returning method that accepts a single
+argument.
 
-可以理解为 “有某方面的知识”，在面向对象的概念中可以理解为类实现了某个接口，因此这个类就有了这个接口代表的"知识"。这符合oop六大原则中的**迪米特原则**-***最少知识原则***
+**表示一个bean符合通过回调方法接受spring容器————一个特殊的框架对象的通知的条件。**，实际的方法签名是由某些特别的子接口提供定义的，不过典型的方法签名应该是一个只接受一个参数，void返回值的方法签名。
 
-> 一个对象应该对其它对象有最小的了解，或者一个类应该对自己需要耦合或调用的类知道得最少，类的内部如何实现与调用者或者依赖者关系都没关系，调用者只需要它需要的方法就可以了。
+不过仅仅实现Aware接口并没有什么作用，因为他是一个标记接口，不提供任何的默认功能，如果要获得Aware表示的能力，那么应该显式的进行回调方法的处理，例如`BeanPostProcessor`，`AbstractAutowireCapableBeanFactory`，`ApplicationContextAwareProcessor` 等组件的实现方式。
 
-所以我个人认为实现这个原则/技术使用接口再合适不过了，只要大家都依赖于能够完成功能的最小接口，那么也就符合迪米特法则了，所有在spring中大量使用了 xxxxAware这样的命名方式。比如`BeanFactoryAware`，`BeanNameAware  `etc.
-    
+### _ApplicationContextAware_
+
 ## 以后不要再问我
 
 * 为什么我的请求参数接收不到?
