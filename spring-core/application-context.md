@@ -4,6 +4,7 @@
 
 看`AbstractXmlApplicationContext`的这个方法的实现，只是使用了XmlBeanDefinitionReader 来对xml中描述的bean做一个加载，加载的逻辑可以看看 [](/spring-core/applicationcontext.md),
 
+
 ```
 	/**
 	 * Loads the bean definitions via an XmlBeanDefinitionReader.
