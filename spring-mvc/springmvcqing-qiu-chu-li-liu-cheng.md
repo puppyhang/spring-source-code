@@ -92,6 +92,7 @@ handler:常用的handler的类型是HandlerMethod，被@Controller和@RequestMap
 
 ### _HandlerAdapter_
 > MVC framework SPI, MVC 框架 “服务提供接口”(SPI)
+
 ### _ModelAndView_
 
 ### _HandlerExcutionChain_
