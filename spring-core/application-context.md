@@ -32,5 +32,5 @@
 	}
 ```
 
-重点是在AbstractRefreshableApplicationContext
+重点是在`AbstractRefreshableApplicationContext`中持有一个BeanFactory对象
 
