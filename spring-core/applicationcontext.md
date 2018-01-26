@@ -14,3 +14,4 @@
 从XML中读取bean的定义，然后将bean注册到BeanDefinitionRegistry中，这个接口试专门用来给BeanFactory实现的，为了持有bean的所有定义。
 
 # 什么是spring的容器？
+spring 
