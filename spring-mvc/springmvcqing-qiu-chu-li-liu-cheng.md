@@ -101,6 +101,7 @@ handler:常用的handler的类型是HandlerMethod，被@Controller和@RequestMap
 ### _ModelAndView_
 
 >  model 表示数据，view表示视图，合起来就是数据和视图的封装对象
+
 ### _ViewResolver_
 
 > 视图解析器
