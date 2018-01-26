@@ -14,4 +14,4 @@
 从XML中读取bean的定义，然后将bean注册到BeanDefinitionRegistry中，这个接口试专门用来给BeanFactory实现的，为了持有bean的所有定义。
 
 # 什么是spring的容器？
-spring 
+spring 的容器实际上是一个虚拟概念，代表的是一种内部持有预先定义好的bean的方式，实际上就是Java的容器保存了所有的对象，但是提供一个BeanFactory作为客户端的视图访问"容器"。
