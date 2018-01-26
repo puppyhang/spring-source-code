@@ -20,8 +20,6 @@
 根bean定义本质上是运行时的“统一”bean定义视图。
 
 **ChildBeanDefinition**
-
-67/5000
 从其父项继承设置的Bean的Bean定义。
 
 # 什么是spring的容器？
