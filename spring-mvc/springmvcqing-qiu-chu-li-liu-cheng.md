@@ -74,7 +74,6 @@ handler:常用的handler的类型是HandlerMethod，被@Controller和@RequestMap
 
 ### _HandlerMapping_ 
 
-
 > Interface to be implemented by objects that define a mapping between  
 >  requests and handler objects.  
 >  这个接口会被那些定义了请求和处理器之间的映射关系的对象实现,他的实现类有BeanNameUrlHandlerMapping，DefaultAnnotationHandlerMapping，RequestMappingHandlerMapping等
