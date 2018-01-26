@@ -24,4 +24,4 @@
 
 # 什么是spring的容器？
 spring 的容器实际上是一个虚拟概念，代表的是一种内部持有预先定义好的bean的方式，实际上就是Java的容器保存了所有的对象，但是提供一个BeanFactory作为客户端的视图访问"容器"。
-要 证明这个论述，我们从beanFactory.getBean(Class)方法就能得知结果。Spring容器就是一个巨大的bean工厂(BeanFactory)。Spring容器使用Ioc管理所有组成应用系统的组件。  Spring容器会使用XML解析器读取改属性值，并利用反射来创建该实现类的实例。
+要 证明这个论述，我们从beanFactory.getBean(Class)方法就能得知结果。Spring容器就是一个巨大的bean工厂(BeanFactory)。Spring容器使用Ioc管理所有组成应用系统的组件。Spring容器会使用XML解析器读取改属性值，并利用反射来创建该实现类的实例。
