@@ -68,6 +68,24 @@ Handler执行链，由一系列的Handler和Handler Intercptor组成，由Handle
 spring中有很多种Handler，常见的是HandlerMethod,用HandlerMethod表示一个Handler,并不是我们猜想的一个Controller或者一个Controller里面使用@RequestMapping注解的方法，请看下图，我们将理解HandlerExecutionChain和Handler，HandlerExecution之间的联系。
 ![](/assets/handler-chain.png)
 
+mappedHandler是一个HandlerExecutionChain,他的类定义如下
+
+
+```
+
+public class HandlerExecutionChain {
+    private static final Log logger = LogFactory.getLog(HandlerExecutionChain.class);
+
+	private final Object handler;
+
+	private HandlerInterceptor[] interceptors;
+
+	private List<HandlerInterceptor> interceptorList;
+
+	private int interceptorIndex = -1;
+	
+```
+
 
 ### _HandlerMapping_
 
