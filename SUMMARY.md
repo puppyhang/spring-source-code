@@ -7,8 +7,10 @@
 ## spring core
 
 * [aop](spring-core/aop.md)
+* [applicationContext](spring-core/applicationcontext.md)
 
 ## spring mvc
 
 * [springmvc请求处理流程](spring-mvc/springmvcqing-qiu-chu-li-liu-cheng.md)
+* [mvc-applicationContext](spring-mvc/mvc-applicationcontextmd.md)
 
