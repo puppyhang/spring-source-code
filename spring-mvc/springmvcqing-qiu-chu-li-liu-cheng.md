@@ -100,10 +100,6 @@ handler:常用的handler的类型是HandlerMethod，被@Controller和@RequestMap
 
 ### _ModelAndView_
 
-### _HandlerExcutionChain_
-
-
-
 ### _ViewResolver_
 
 ### _Aware_
