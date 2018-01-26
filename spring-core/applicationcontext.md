@@ -18,6 +18,7 @@
 
 **RootBeanDefinition**
 根bean定义本质上是运行时的“统一”bean定义视图。
+
 **ChildBeanDefinition**
 
 # 什么是spring的容器？
