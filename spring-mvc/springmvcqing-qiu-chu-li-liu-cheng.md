@@ -122,7 +122,7 @@ argument.
 
 ### _ApplicationContextAware_
 
-# Dispatcher Servlet 请求处理流程
+# Dispatcher Servlet 请求处理流程（也就是springmvc请求处理流程）
 
 
 # 读完本文之后以后不要再问我
