@@ -38,6 +38,12 @@
 ```
 AbstractRefreshableApplicationContext中的抽象方法，这个类初始化好BeanFactory之后就调用这个方法加载bean，
 loadBeanDefinitions(DefaultListableBeanFactory beanFactory)
+
+<p>The only method to be implemented by subclasses is {@link #loadBeanDefinitions},
+which gets invoked on each refresh. A concrete implementation is supposed to load
+bean definitions into the given
+{@link org.springframework.beans.factory.support.DefaultListableBeanFactory},
+typically delegating to one or more specific bean definition readers.
 ```
 
 
