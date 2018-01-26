@@ -230,7 +230,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "+getBean(String name)",
+											"text": "+getBean()",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -259,7 +259,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "+getBean(String name, Class requiredType)",
+											"text": "+containsBean(String name)",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -391,24 +391,6 @@
 							"visibility": "public",
 							"isStatic": false,
 							"isLeaf": false,
-							"parameters": [
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAFhMeXK3o0Djpc=",
-									"_parent": {
-										"$ref": "AAAAAAFhMeXEj4z8940="
-									},
-									"name": "String name",
-									"visibility": "public",
-									"isStatic": false,
-									"isLeaf": false,
-									"type": "",
-									"isReadOnly": false,
-									"isOrdered": false,
-									"isUnique": false,
-									"direction": "in"
-								}
-							],
 							"concurrency": "sequential",
 							"isQuery": false,
 							"isAbstract": false
@@ -419,7 +401,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFhMeRHPYzRJU4="
 							},
-							"name": "getBean",
+							"name": "containsBean",
 							"visibility": "public",
 							"isStatic": false,
 							"isLeaf": false,
@@ -434,23 +416,6 @@
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
-									"type": "",
-									"isReadOnly": false,
-									"isOrdered": false,
-									"isUnique": false,
-									"direction": "in"
-								},
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAFhMeaY1I0Oibc=",
-									"_parent": {
-										"$ref": "AAAAAAFhMeYqxY0Fcaw="
-									},
-									"name": "Class requiredType",
-									"visibility": "public",
-									"isStatic": false,
-									"isLeaf": false,
-									"type": "",
 									"isReadOnly": false,
 									"isOrdered": false,
 									"isUnique": false,
