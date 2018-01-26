@@ -11,4 +11,4 @@
 > spring容器的基础，从xml配置文件中加载bean的定义。
 
 **XmlBeanDefinitionReader**
-从
+从XML中读取bean的定义，然后将bean注册到容器中
