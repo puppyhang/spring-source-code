@@ -104,7 +104,7 @@ handler:常用的handler的类型是HandlerMethod，被@Controller和@RequestMap
 
 ### _ViewResolver_
 
-> 视图解析器
+> 视图解析器，根据我们在XML中的配置，他会找到放在项目中的页面
 
 ### _Aware_
 >Marker superinterface indicating that a bean is eligible to be
