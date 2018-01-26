@@ -100,7 +100,7 @@ handler:常用的handler的类型是HandlerMethod，被@Controller和@RequestMap
 
 ### _ModelAndView_
 
->  model 表示数据，view表示视图，合起来就是数据和视图的封装对象
+>  model 表示数据，view表示视图，合起来就是数据和视图的封装对象，controller中的@RequestMapping修饰的方法返回这个对象，spring就回去使用ViewResoler解析页面，并使用模板渲染数据。
 
 ### _ViewResolver_
 
