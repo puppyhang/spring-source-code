@@ -33,5 +33,12 @@
 ```
 
 重点是在`AbstractRefreshableApplicationContext`中持有一个BeanFactory对象
+
+
+```
+AbstractRefreshableApplicationContext中的抽象方法，这个类初始化好BeanFactory之后就调用这个方法加载bean，
 loadBeanDefinitions(DefaultListableBeanFactory beanFactory)
+```
+
+
 
