@@ -92,7 +92,7 @@ handler:常用的handler的类型是HandlerMethod，被@Controller和@RequestMap
 
 ### _HandlerAdapter_
 > MVC framework SPI, MVC 框架 “服务提供接口”(SPI)
-
+> SPI的全名是Service Provider Interface，在java.util.ServiceLoader里面有比较详细的介绍。
 ### _ModelAndView_
 
 ### _HandlerExcutionChain_
