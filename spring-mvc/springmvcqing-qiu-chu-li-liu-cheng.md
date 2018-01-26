@@ -127,6 +127,7 @@ argument.
 1：根据请求的信息找到HandlerExecutionChain
 2：根据HandlerExecutionChain中的handler找到能够支持这种handler的handlerAdapter
 3：由HandlerAdapter执行拦截器和请求的处理器方法
+4：清楚了以上流程我们就可以自定义自己的mapping和adapter了，只要注册给springmvc就可以了。
 
 # 读完本文之后以后不要再问我
 
