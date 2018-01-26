@@ -2,7 +2,5 @@
 
 ## 核心概念
 
-
-
-
+DefaultListableBeanFactory
 
