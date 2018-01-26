@@ -61,48 +61,56 @@ processRequest(HttpServletRequest request, HttpServletResponse response)
 这个方法做了一系列的初始化之后就会调用doService()方法，这样就到了DispatcherServlet处理求情的方法了，
 核心的逻辑从这里开始了，如果想看懂核心逻辑是如何实现，请先继续看完一下核心概念,然后我们在继续讨论Dispatcher是如何工作的
 ```
+
 ### _HandlerExecutionChain_
+
 Handler执行链，由一系列的Handler和Handler Intercptor组成，由HandlerMapping的getHandler方法返回。这样在spring执行handler的请求处理方法的时候会先执行一系列的Handler Intercptor。
 
-###  _Handler_  _HandlerInterceptor_ 
+### _Handler_  _HandlerInterceptor_
 
-spring中有很多种Handler，常见的是HandlerMethod,用HandlerMethod表示一个Handler,并不是我们猜想的一个Controller或者一个Controller里面使用@RequestMapping注解的方法，请看下图，我们将理解HandlerExecutionChain和Handler，HandlerExecution之间的联系。
+spring中有很多种Handler，常见的是HandlerMethod,用HandlerMethod表示一个Handler,并不是我们猜想的一个Controller或者一个Controller里面使用@RequestMapping注解的方法，请看下图，我们将理解HandlerExecutionChain和Handler，HandlerExecution之间的联系。  
 ![](/assets/handler-chain.png)
 
-mappedHandler是一个HandlerExecutionChain类型的对象,HandlerExecutionChain类型的对象包括了一个handler和一些列handler interceptor。handler是用于保存处理请求器信息的对象，interceptor是拦截器，会在handler中处理请求的方法被执行之前被执行。
+mappedHandler是一个HandlerExecutionChain类型的对象,HandlerExecutionChain类型的对象包括了一个handler和一些列handler interceptor。handler是用于保存处理请求器信息的对象，interceptor是拦截器，会在handler中处理请求的方法被执行之前被执行。  
 handler:常用的handler的类型是HandlerMethod，被@Controller和@RequestMapping标记的类型或方法才可以被称之为处理器，handler里面包括了bean：处理这个用户请求类的bean，beanFactory：创建这个bean的工厂，beanType：这个bean的类型，method：处理用户请求的bean中执行请求的方法，paramters：方法执行需要的参数。所以现在我们理解了Handler不是我们理解的Controller或者Controller中的方法，这种理解是狭义的。
 
-
-### _HandlerMapping_ 
+### _HandlerMapping_
 
 > Interface to be implemented by objects that define a mapping between  
 >  requests and handler objects.  
 >  这个接口会被那些定义了请求和处理器之间的映射关系的对象实现,他的实现类有BeanNameUrlHandlerMapping，DefaultAnnotationHandlerMapping，RequestMappingHandlerMapping等
 
 **RequestMappingHandlerMapping**
-    
-    平时我们在controller中使用@RequestMapping定义的handler方法就是被这个类发现的，
-    如果这个类不能正常工作，那么我们定义的接口八九不离十的会出现404了，看看他是怎么工作的。
+
+```
+平时我们在controller中使用@RequestMapping定义的handler方法就是被这个类发现的，
+如果这个类不能正常工作，那么我们定义的接口八九不离十的会出现404了，看看他是怎么工作的。
+```
+
 **BeanNameUrlHandlerMapping**
-    
-    使用定义的Bean的名字去映射URLS
+
+```
+使用定义的Bean的名字去映射URLS
+```
 
 **DefaultAnnotationHandlerMapping**
 
-    这个实现已经过时了，所以不做过多的讲解。
+```
+这个实现已经过时了，所以不做过多的讲解。
+```
 
 ### _HandlerAdapter_
-> MVC framework SPI, MVC 框架 “服务提供接口”(SPI)
 
-> SPI的全名是Service Provider Interface，在java.util.ServiceLoader里面有比较详细的介绍。
-不必过于执着于这些细杂的概念，只需要知道mvc框架提供的服务都是通过这个接口来实现的，我们可以通过实现这个接口实现我们自己的HandlerAdapter，他的作用之一也是使得DispatcherServlet能够独立，灵活可扩展。
+> MVC framework SPI, MVC 框架 “服务提供接口”\(SPI\)
+>
+> SPI的全名是Service Provider Interface，在java.util.ServiceLoader里面有比较详细的介绍。  
+> 不必过于执着于这些细杂的概念，只需要知道mvc框架提供的服务都是通过这个接口来实现的，我们可以通过实现这个接口实现我们自己的HandlerAdapter，他的作用之一也是使得DispatcherServlet能够独立，灵活可扩展。
 
 上文我们讲完了[Hadnler ](#Handler)[HandlerIntercptor](#Handler)和 [HandlerExcutionChain](#HandlerExecutionChain), HandlerAdapter会根据HandlerMapping找到支持这种mapping规则的HandlerAdapter，然后调用handle方法执行用户定义的请求处理方法。然后返回ModelAndView。
 
-
 ### _ModelAndView_
 
->  model 表示数据，view表示视图，合起来就是数据和视图的封装对象，controller中的@RequestMapping修饰的方法返回这个对象，spring就回去使用ViewResoler解析页面，并使用模板渲染数据。
+> model 表示数据，view表示视图，合起来就是数据和视图的封装对象，controller中的@RequestMapping修饰的方法返回这个对象，spring就回去使用ViewResoler解析页面，并使用模板渲染数据。
 
 ### _ViewResolver_
 
@@ -110,9 +118,9 @@ handler:常用的handler的类型是HandlerMethod，被@Controller和@RequestMap
 
 # Dispatcher Servlet 请求处理流程（也就是springmvc请求处理流程）
 
-1：根据请求的信息找到HandlerExecutionChain
-2：根据HandlerExecutionChain中的handler找到能够支持这种handler的handlerAdapter
-3：由HandlerAdapter执行拦截器和请求的处理器方法
+1：根据请求的信息找到HandlerExecutionChain  
+2：根据HandlerExecutionChain中的handler找到能够支持这种handler的handlerAdapter  
+3：由HandlerAdapter执行拦截器和请求的处理器方法  
 4：清楚了以上流程我们就可以自定义自己的mapping和adapter了，只要注册给springmvc就可以了。
 
 # 读完本文之后以后不要再问我
@@ -124,4 +132,6 @@ handler:常用的handler的类型是HandlerMethod，被@Controller和@RequestMap
 * 为什么我什么都没返回却收到404?
 
 
+
+[^1]: Enter footnote here.
 
