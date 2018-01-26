@@ -2,7 +2,7 @@
 
 目前我个人认为他只是对DefaultListableBeanFactory的封装而已，他的实现也都比较简单
 
-看AbstractXmlApplicationContext
+看`AbstractXmlApplicationContext`的这个方法的实现，只是使用了XmlBeanDefinitionReader 来对xml中描述的bean做一个加载，
 
 ```
 	/**
