@@ -32,3 +32,5 @@
 	}
 ```
 
+重点是在AbstractRefreshableApplicationContext
+
