@@ -125,7 +125,7 @@ argument.
 # Dispatcher Servlet 请求处理流程（也就是springmvc请求处理流程）
 
 1：根据请求的信息找到HandlerExecutionChain
-2：
+2：根据HandlerExecutionChain中的handler找到能够支持这种handler的handlerAdapter
 3：
 
 # 读完本文之后以后不要再问我
