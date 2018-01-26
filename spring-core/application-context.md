@@ -33,4 +33,5 @@
 ```
 
 重点是在`AbstractRefreshableApplicationContext`中持有一个BeanFactory对象
+loadBeanDefinitions(DefaultListableBeanFactory beanFactory)
 
