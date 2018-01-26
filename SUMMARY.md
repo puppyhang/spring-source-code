@@ -4,7 +4,7 @@
 
 * [Introduction](README.md)
 
-## spring core
+## spring
 
 * [applicationContext](spring-core/applicationcontext.md)
 * [aware](spring-core/aware.md)
