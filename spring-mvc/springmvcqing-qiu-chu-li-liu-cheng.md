@@ -133,5 +133,3 @@ handler:常用的handler的类型是HandlerMethod，被@Controller和@RequestMap
 
 
 
-[^1]: Enter footnote here.
-
