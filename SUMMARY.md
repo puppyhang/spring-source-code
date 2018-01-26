@@ -6,11 +6,11 @@
 
 ## spring
 
-* [BeanFactory](spring-core/applicationcontext.md)
+* [bean-factory](spring-core/applicationcontext.md)
 * [aware](spring-core/aware.md)
 * [aop](spring-core/aop.md)
-* core
-* applicationContext
+* [core](spring-core/core.md)
+* [application-context](spring-core/application-context.md)
 
 ## spring mvc
 
