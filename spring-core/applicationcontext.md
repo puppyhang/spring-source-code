@@ -17,7 +17,7 @@
 这个组件负责登记/注册所有持有的bean的定义，在getBean的时候会根据这里的bean的定义信息来返回真实的对象
 
 **RootBeanDefinition**
-
+根bean定义本质上是运行时的“统一”bean定义视图。
 **ChildBeanDefinition**
 
 # 什么是spring的容器？
