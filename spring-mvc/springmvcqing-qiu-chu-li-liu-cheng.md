@@ -72,8 +72,7 @@ mappedHandler是一个HandlerExecutionChain类型的对象,HandlerExecutionChain
 handler:常用的handler的类型是HandlerMethod，被@Controller和@RequestMapping标记的类型或方法才可以被称之为处理器，handler里面包括了bean：处理这个用户请求类的bean，beanFactory：创建这个bean的工厂，beanType：这个bean的类型，method：处理用户请求的bean中执行请求的方法，paramters：方法执行需要的参数。所以现在我们理解了Handler不是我们理解的Controller或者Controller中的方法，这种理解是狭义的。
 
 
-### _HandlerMapping_  ### _HandlerInterceptor_
-
+### _HandlerMapping_ 
 
 
 > Interface to be implemented by objects that define a mapping between  
