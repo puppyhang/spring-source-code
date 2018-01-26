@@ -9,6 +9,7 @@
 * [applicationContext](spring-core/applicationcontext.md)
 * [aware](spring-core/aware.md)
 * [aop](spring-core/aop.md)
+* core
 
 ## spring mvc
 
